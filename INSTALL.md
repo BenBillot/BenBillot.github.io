@@ -1,5 +1,7 @@
 # Installing and Deploying
 
+ Now I just need to run `docker compose up` to run the site locally
+
 <!--ts-->
 
 - [Installing and Deploying](#installing-and-deploying)
