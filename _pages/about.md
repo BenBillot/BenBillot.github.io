@@ -34,4 +34,4 @@ randomisation strategy for domain-agnostic processing of brain MRI (like segment
 join the lab of [Prof. Polina Golland](https://people.csail.mit.edu/polina/) at MIT to work on symetry representation 
 with equivariant networks. I am now a full-time researcher at Inria Sophia-Antipolis in the 
 [Epione team](https://www.inria.fr/fr/epione) led by
-[Prof. Nicholas Ayache](https://www-sop.inria.fr/members/Nicholas.Ayache/).
+[Prof. Nicholas Ayache](https://www-sop.inria.fr/members/Nicholas.Ayache/). 
