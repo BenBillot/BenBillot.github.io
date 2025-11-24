@@ -79,6 +79,11 @@ ninja.data = [{
           description: "A domain-agnostic brain MR segmentation suite implemented in FreeSurfer",
           section: "Projects",handler: () => {
               window.location.href = "/projects/SynthSeg/";
+            },},{id: "projects-anatomix",
+          title: 'anatomix',
+          description: "Extract modality-agnostic 3D features for any biomedical imaging task.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/anatomix/";
             },},{id: "projects-hypo-seg",
           title: 'Hypo_seg',
           description: "A segmentation tool for hypothalamic subunits implemented in FreeSurfer",
