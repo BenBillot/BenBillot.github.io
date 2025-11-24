@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-cv_pdf: CV_Billot.pdf # you can also use external links here
+cv_pdf: cv_billot.pdf # you can also use external links here
 description: Here's a summary of my resume. My full CV is available in PDF format at the link given above.
 toc:
   sidebar: left

@@ -17,22 +17,21 @@ announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm a full-time researcher in the Epione team at Inria Sophia-Antipolis. My research focuses on improving data 
-representation to increase the robustness of systems for the analysis of clinical imaging data. 
+I'm a full-time researcher in the [Epione team](https://www.inria.fr/fr/epione) at Inria Sophia-Antipolis. My research 
+focuses on improving data representation to increase the robustness of systems for the analysis of clinical imaging data.
 
-After completing a MSc in neuro-technology at Imperial College London in 2016, I joined the incubator of start-ups 
-[Founders Factory](https://foundersfactory.com/) as a member of the AI team. I then pursued a PhD at University College 
-London with [Dr. Juan Eugenio Iglesias](http://www.jeiglesias.com) on developing a domain randomisation strategy 
-for domain-agnostic segmentation of brain MRI ([SynthSeg](https://github.com/BBillot/SynthSeg)). I then worked as postdoc at MIT with Prof. Polina 
-Golland in the Medical Vision Group. 
+**Research interests**: My research focuses on different steps of the development cycle of AI algorithms including: generation of diverse
+training datasets, dealing with different kinds of supervision, learning interpretable data representations, building robust 
+architectures that explicitly model data symmetries. These techniques are then applied to a variety of tasks for 
+medical image analysis, such as image segmentation, registration, etc.
 
-In addition to further explore domain randomisation techniques, I'm working on different projects 
-including equivariant networks, registration of fetal MRI, 
-unifying disjoint manual annotation databases to train unified segmentation models.
+**Biography**: After completing a MSc in neuro-technology at Imperial College London in 2016, I joined the incubator of start-ups 
+[Founders Factory](https://foundersfactory.com/) as a member of the AI team. I then returned to the academic world by pursuing a PhD at 
+University College London with [Dr. Juan Eugenio Iglesias](http://www.jeiglesias.com), during which I proposed the domain 
+randomisation strategy for domain-agnostic processing of brain MRI (like segmentation with [SynthSeg](https://github.com/BBillot/SynthSeg)). I then 
+join the lab of [Prof. Polina Golland](https://people.csail.mit.edu/polina/) at MIT to work on symetry representation 
+with equivariant networks. I am now a full-time researcher at Inria Sophia-Antipolis in the 
+[Epione team](https://www.inria.fr/fr/epione) led by
+[Prof. Nicholas Ayache](https://www-sop.inria.fr/members/Nicholas.Ayache/).
