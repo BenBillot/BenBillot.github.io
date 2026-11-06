@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Check out [our new MICCAI paper](https://arxiv.org/pdf/2503.04499?) on keypoint-based registration with spatial regularisation for enhanced interpretability.
+Check out our new [MICCAI paper](https://arxiv.org/pdf/2503.04499?) on keypoint-based registration with spatial regularisation for enhanced interpretability.
