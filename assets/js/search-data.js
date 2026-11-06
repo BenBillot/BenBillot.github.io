@@ -38,7 +38,7 @@ ninja.data = [{
             window.location.href = "/cv/";
           },
         },{id: "news-synthseg-medical-image-analysis-and-synthseg-2-0-pnas-are-out-open-book-open-book",
-          title: 'SynthSeg (Medical Image Analysis) and  SynthSeg 2.0 (PNAS) are out! :open_book: :open_book:',
+          title: 'SynthSeg (Medical Image Analysis) and SynthSeg 2.0 (PNAS) are out! :open_book: :open_book:',
           description: "",
           section: "News",},{id: "news-glad-to-have-presented-my-work-at-midl-2023-on-equivariant-networks-for-registration-of-fetal-brain-mri",
           title: 'Glad to have presented my work at MIDL 2023 on Equivariant Networks for...',
@@ -47,7 +47,7 @@ ninja.data = [{
           title: 'Great presentations and discussion at the Boston Medical Imaging Workshop that I co-organised...',
           description: "",
           section: "News",},{id: "news-loads-of-great-works-at-miccai-always-a-pleasure-to-attend",
-          title: 'Loads of  great works  at MICCAI, always a pleasure to attend!',
+          title: 'Loads of great works at MICCAI, always a pleasure to attend!',
           description: "",
           section: "News",},{id: "news-check-out-our-wcacv-24-paper-work-led-by-neel-dey-on-domain-randomisation-for-segmentation-of-star-shape-objects",
           title: 'Check out our WCACV 24 paper. Work led by Neel Dey on domain...',
