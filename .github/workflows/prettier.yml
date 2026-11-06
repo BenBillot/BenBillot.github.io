@@ -26,13 +26,9 @@ jobs:
       - name: Prettier Check 🔎
         id: prettier
         run: |
-          npx --yes prettier --check . || {
-            echo "======================================"
-            echo "PRETTIER FORMATTING ERRORS DETECTED"
-            echo "======================================"
-            npx --yes prettier --list-different .
-            exit 1
-          }
+          echo "Checking formatting..."
+          npx prettier --check . --log-level debug
+          echo "Prettier check completed."
       - name: Create diff 📝
         # https://docs.github.com/en/actions/learn-github-actions/expressions#failure
         if: ${{ failure() }}
