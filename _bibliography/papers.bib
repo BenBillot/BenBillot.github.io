@@ -5,8 +5,81 @@
 
 
 # JOURNAL PAPERS
+
+@article{facente_toward_2026,
+    title = {Toward real-time alignment of 3D CT and 2D X-ray with multi-stage CNNs},
+    author = {Facente, Federica and Billot, Benjamin and Gopalakrishnan, Vivek and Kattel, Manasi and Wei, Wen and Golland, Polina and Delingette, Hervé and Ayache, Nicholas and Berthet-Rayne, Pierre},
+    journal = {Computer Assisted Surgery},
+    year = {2026},
+    volume = {31},
+    number = {1},
+    pages={2684372},
+    abstract = {2D X-ray imaging is widely employed in image-guided interventions to provide real-time visualization of patient anatomy and interventional devices. However, lacking depth information and soft-tissue contrast, intraoperative X-rays are often complemented with high-resolution preoperative 3D computed tomography (CT) scans. Clinicians must mentally register the 3D preoperative information onto the 2D visualization,  increasing cognitive workload and motivating the need for automated solutions. Traditionally, this registration task is formulated as estimating the position of the X-ray source relatively to the CT scan. State-of-the-art 3D/2D registration approaches are trained using synthetic CT-to-X-ray projections, but these methods still require manual annotations and employ a time-consuming optimization that limits their deployment for live image guidance. In this paper, we propose LXPose (live X-ray pose estimation), a fast multi-stage 3D/2D registration framework for real-time image guidance. Specifically, we introduce an efficient two-stage CNN that effectively bypasses slow optimization for fast inference. Critically, we also eliminate the need for any manual annotations by introducing an automated strategy for landmark extraction. Finally, we train LXPose using a projection loss for high accuracy, and apply extensive data augmentation in a first attempt to reduce the domain gap between the synthetic training X-rays and real testing data. We demonstrate LXPose on two datasets from different anatomical regions, where it yields results comparable to the state-of-the-art, while reducing inference time by two orders of magnitude, from several seconds to 20ms. Overall, our results demonstrate the potential of LXPose for real-time clinical deployment.},
+    html = {https://www.tandfonline.com/doi/full/10.1080/24699322.2026.2684372?scroll=top&needAccess=true},
+    pdf = {https://www.tandfonline.com/doi/epdf/10.1080/24699322.2026.2684372?needAccess=true},
+    bibtex_show = {true},
+    abbr = {Journal},
+}
+
+@article{puonti_fast_2026,
+    title = {Fast segmentation with the NextBrain histological atlas},
+    author = {Puonti, Oula and Nolan, Jackson and Dicamillo, Robert and Balbastre, Yael and Casamitjana, Adria and Mancini, Matteo and Robinson, Eleanor and Peter, Loic and Annunziata, Roberto and Althonayan, Juri and Crampsie, Shauna and Blackburn, Emily and Billot, Benjamin and Atzeni, Alessia and Schmidt, Peter and Hughes, James and Augustinack, Jean and Edlow, Brian and Zöllei, Lilla and Thomas, David and Kliemann, Dorit and Bocchetta, Martina and Strand, Catherine and Holton, Janice and Jaunmuktane, Zane and Iglesias, Juan Eugenio},
+    journal = {Imaging Neuroscience},
+    year = {2026},
+    volume = {4},
+    abstract = {Structural brain analysis at the subregion level offers critical insights into healthy aging and neurodegenerative diseases. The NextBrain histological atlas was recently introduced to support such fine-grained investigations, but its existing Bayesian segmentation framework remains computationally prohibitive, particularly for large-scale studies. We present a new, open-source tool that dramatically accelerates segmentation using a hybrid approach combining: machine learning, contrast-adaptive segmentation; target-specific image synthesis; and fast diffeomorphic registration (all three with GPU support). Our method enables highly granular segmentation of brain MRI scans of any resolution and contrast (in vivo or ex vivo) at a fraction of the computational cost of the original method (\&lt;5 minutes on a GPU). We validate our tool on four different modalities (in vivo MRI, ex vivo MRI, HiP-CT, and photography) across a total of approximately 4,000 brain scans. Our results demonstrate that the accelerated approach achieves comparable accuracy to the original method in terms of Dice scores, while reducing runtime by over an order of magnitude. This work enables high-resolution anatomical analysis at unprecedented scale and flexibility, providing a practical solution for large neuroimaging studies. Our tool is publicly available in FreeSurfer.},
+    html = {https://direct.mit.edu/imag/article/doi/10.1162/IMAG.a.1244/136501/Fast-segmentation-with-the-NextBrain-histological},
+    pdf = {https://www.biorxiv.org/content/10.1101/2025.09.22.673638v1.full.pdf},
+    bibtex_show = {true},
+    abbr = {Journal},
+}
+
+@article{wu_tumoursynth_2026,
+    title = {TumorSynth: integrated brain tumor and tissue segmentation on brain MRI of any resolution and contrast},
+    author = {Wu, Jiaming and Billot, Benjamin and Zhao, Fenqiang and Li, Junjie and Liu, Yaou and Zhuo, Zhizheng and Pontillo, Giuseppe and Liu, Xing and Lin, Song and Zhang, Xiaokang and Qiu, Jun and Weng, Jinyuan and Zhang, Ling and Lu, Le and Iglesias, Juan Eugenio and Barkhof, Frederik and Carrasco, Ferran},
+    journal = {Radiology: Imaging Cancer},
+    year = {2026},
+    volume = {8},
+    number = {2},
+    pages={e250222},
+    abstract = {To develop and validate a deep neural network that simultaneously segments brain tumors and anatomic structures, regardless of the contrast and resolution of the input scans, and can effortlessly adapt to unseen modalities. The authors included various MRI scans from patients with and without brain tumors from four different datasets. Patient data were divided into a training set and a test set. The authors’ method, TumorSynth, combines a Bayesian generative model and a deep learning segmentation model. The generative model creates paired synthetic labels and images with simulated tumors and brain tissues, providing a rich dataset for training the segmentation model. The authors quantitatively compared its performance with that of other widely used methods by calculating Dice similarity coefficients (DSCs). A total of 1971 patients with and without tumors were included in the study (training set, n = 351 patients; test set, n = 1620 patients). The median DSCs for segmentation (authors’ method vs reference standard) were 0.89 (IQR, 0.83–0.95; P < .001) for the unaffected brain volume and 0.89 (IQR, 0.84–0.94; P < .001) for the tumor region. There were no differences in parcellation performance when an MRI sequence was missing (P = .07). In cross-modality validation, the authors’ method achieved DSC values of 0.88 for apparent diffusion coefficient, 0.85 for diffusion-weighted imaging, 0.80 for susceptibility-weighted imaging, and 0.79 for fractional anisotropy images. The authors observed a 4% false-positive rate when processing tumor-free MR images. The authors developed a deep neural network for brain tumor and tissue segmentation, validated its performance across standard structural MRI sequences, and determined its generalizability to unseen data.},
+    html = {https://pubs.rsna.org/doi/10.1148/rycan.250222?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed},
+    bibtex_show = {true},
+    abbr = {Journal},
+}
+
+@article{timar_autonomic_2026,
+    title = {Autonomic dysfunction and hypothalamic atrophy in frontotemporal dementia and primary psychiatric disorders},
+    author = {Timar, Yannick and van Engelen, Marie-Paule and Venkatraghavan, Vikram and Billot, Benjamin and Fieldhouse, Jay and van't Hooft, Jochum and de Boer, Sterre and Koevoets, Chris and Hartog, Luc and Groot, Collin and Oudega, Mardien and Vijverberg, Jort and van der Flier, Wiesje and Barkhof, Frederik and Pijnenburg, Yolande},
+    journal = {Alzheimer's & Dementia: Diagnosis, Assessment & Disease Monitoring},
+    year = {2026},
+    volume = {18},
+    number = {1},
+    pages={e70284},
+    abstract = {Evidence suggests that autonomic symptoms in frontotemporal dementia (FTD) may relate to hypothalamic pathology. We investigated (1) autonomic symptoms in FTD, primary psychiatric disorders (PPD), and controls; (2) hypothalamic volumes; and (3) their associations. Autonomic Symptoms Questionnaire (ASQ) data were collected from FTD (n = 31), PPD (n = 30), and controls (n = 30). MRI data from these and additional participants (FTD n = 259, PPD n = 44, controls n = 62) were analyzed using a deep learning approach. FTD and PPD groups reported more cardiovascular symptoms than controls (p = 0.020; p = 0.049). FTD patients showed greater thermodysregulation (vs. PPD p = 0.026; vs. controls p = 0.012) and altered pain perception (FTD 13%, PPD 2%, controls 1%; p < 0.001). FTD showed smaller hypothalamic subregions, except the left inferior-tubular area. In FTD, autonomic symptoms correlated with subregional hypothalamic volumes. FTD patients exhibit increased autonomic symptoms across several domains compared to PPD and controls; moreover, FTD is associated with smaller regional hypothalamic volume.},
+    html = {https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70284},
+    pdf = {https://alz-journals.onlinelibrary.wiley.com/doi/epdf/10.1002/dad2.70284},
+    bibtex_show = {true},
+    abbr = {Journal},
+}
+
+@article{pagaduan_case_2026,
+    title = {A case series on longitudinal hypothalamic morphology in mild cognitive impairment},
+    author = {Pagaduan, Jeffrey and Marzan, Melvin and Billot, Benjamin},
+    journal = {Annals of Geriatric Medicine and Research},
+    year = {2026},
+    volume = {30},
+    number = {2},
+    pages={285-289},
+    abstract = {We examined the longitudinal hypothalamic morphology in the progression of mild cognitive impairment (MCI). We used multivariable linear modelling to differentiate the structural volumetric change in the hypothalamic nuclei in nine females who developed MCI after 5 years and 61 healthy controls. We found significantly decreased left anterior-inferior (p<0.01), left anterior-superior (p<0.05), and left posterior (p<0.01) hypothalamic regions among females with MCI compared to healthy controls. There was also a significant asymmetry at the anterior-superior hypothalamus (p<0.05) in MCI females than in healthy controls. Thus, the degradation of the specific left hypothalamic subregions and leftward lateralization over time highlight the impact of early-stage MCI on the morphology of hypothalamus.},
+    html = {https://www.e-agmr.org/journal/view.php?doi=10.4235/agmr.25.0122},
+    pdf = {https://www.e-agmr.org/upload/pdf/agmr-25-0122.pdf},
+    bibtex_show = {true},
+    abbr = {Journal},
+}
+
 @article{casamitjana_probabilistic_2025,
-    title = {A probabilistic histological atlas of the human brain for {MRI} segmentation},
+    title = {A probabilistic histological atlas of the human brain for MRI segmentation},
     author = {Casamitjana, Adrià and Mancini, Matteo and Robinson, Eleanor and Peter, Loïc and Annunziata, Roberto and Althonayan, Juri and Crampsie, Shauna and Blackburn, Emily and Billot, Benjamin and Atzeni, Alessia and Puonti, Oula and Balbastre, Yaël and Schmidt, Peter and Hughes, James and Augustinack, Jean and Edlow, Brian and Zöllei, Lilla and Thomas, David and Kliemann, Dorit and Bocchetta, Martina and Strand, Catherine and Holton, Janice and Jaunmuktane, Zane and Iglesias, Juan Eugenio},
     journal = {Nature},
     year = {2025},
@@ -17,7 +90,7 @@
 }
 
 @article{krishnaswamy_benchmarking_2025,
-    title = {Benchmarking of deep learning methods for generic {MRI} multi-organ abdominal segmentation},
+    title = {Benchmarking of deep learning methods for generic MRI multi-organ abdominal segmentation},
     author = {Krishnaswamy, Deepa and Ciausu, Cosmin and Pieper, Steve and Kikinis, Ron and Billot, Benjamin and Fedorov, Andrey},
     journal = {Journal of Medical Imaging},
     year = {2025},
@@ -41,21 +114,8 @@
     abbr = {Journal},
 }
 
-@article{gopinath_synthetic_2025,
-    title = {Synthetic data in generalizable, learning-based neuroimaging},
-    author = {Gopinath, Karthik and Hoopes, Andrew and Alexander, Daniel C. and Arnold, Steven E. and Balbastre, Yael and Billot, Benjamin and Casamitjana, Adrià and Cheng, You and Chua, Russ Yue Zhi and Edlow, Brian L. and Fischl, Bruce and Gazula, Harshvardhan and Hoffmann, Malte and Keene, C. Dirk and Kim, Seunghoi and Kimberly, W. Taylor and Laguna, Sonia and Larson, Kathleen E. and Van Leemput, Koen and Puonti, Oula and Rodrigues, Livia M. and Rosen, Matthew S. and Tregidgo, Henry F. J. and Varadarajan, Divya and Young, Sean I. and Dalca, Adrian V. and Iglesias, Juan Eugenio},
-    journal = {Imaging Neuroscience},
-    year = {2024},
-    volume = {2},
-    abstract = {Synthetic data have emerged as an attractive option for developing machine-learning methods in human neuroimaging, particularly in magnetic resonance imaging (MRI)—a modality where image contrast depends enormously on acquisition hardware and parameters. This retrospective paper reviews a family of recently proposed methods, based on synthetic data, for generalizable machine learning in brain MRI analysis. Central to this framework is the concept of domain randomization, which involves training neural networks on a vastly diverse array of synthetically generated images with random contrast properties. This technique has enabled robust, adaptable models that are capable of handling diverse MRI contrasts, resolutions, and pathologies, while working out-of-the-box, without retraining. We have successfully applied this method to tasks such as whole-brain segmentation (SynthSeg), skull-stripping (SynthStrip), registration (SynthMorph, EasyReg), super-resolution, and MR contrast transfer (SynthSR). Beyond these applications, the paper discusses other possible use cases and future work in our methodology. Neural networks trained with synthetic data enable the analysis of clinical MRI, including large retrospective datasets, while greatly alleviating (and sometimes eliminating) the need for substantial labeled datasets, and offer enormous potential as robust tools to address various research goals.},
-    html = {https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00337/124867/Synthetic-data-in-generalizable-learning-based},
-    pdf = {https://mitp.silverchair-cdn.com/mitp/content_public/journal/imag/2/10.1162_imag_a_00337/4/imag_a_00337.pdf?Expires=1767026785&Signature=o-V8FJawHlzmG0T62C0ai6GFVUS5xe9qxly1E6afmMseDymw1agzhqjgSZIno3iaNnlhv-IXpMRt6HcR9qjVwPd0-4rLyigIkjRW7BL7s4AGog1WayDvWwp1oE00LJLYx7LsAwJ7aSP-0vVGMTXG3pi28rKjufNvENOqqNfIF~2hbUMFTBGQnLEfUxgtxT3Ppadunrac6SWnRzp17t7K2ptP5DImE-0i6Ifz9NqEOEik92tDc6yjxuA2Uuvi9Ehli6BioyUiwbQh0IyHVjHvzZa-qXt-2yAkSUl~Ne2ru-zXmjdJ~5~IYMaprpmfGAtnmo6-vQC-pCWufbP6uKD4~w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA},
-    bibtex_show = {true},
-    abbr = {Journal},
-}
-
 @article{cheng_brain_2025,
-    title = {Brain {MRI} signatures across sex and {CSF} {Alzheimer}’s disease biomarkers},
+    title = {Brain MRI signatures across sex and CSF Alzheimer’s disease biomarkers},
     author = {Cheng, You and He, Yingnan and Gopinath, Karthik and Billot, Benjamin and Iglesias, Juan Eugenio and Wu, Chao-Yi and Dodge, Hiroko and Wills, Anne-Marie and Carlyle, Becky and Kivisäkk, Pia and Hyman, Bradley and Arnold, Steven and Das, Sudeshna},
     journal = {Brain Communications},
     year = {2025},
@@ -69,7 +129,7 @@
 }
 
 @article{billot_se3_2024,
-    title = {{SE(3)}-equivariant and noise-invariant {3D} rigid motion tracking in brain {MRI}},
+    title = {SE(3)-equivariant and noise-invariant 3D rigid motion tracking in brain MRI},
     author = {Billot, Benjamin and Dey, Neel and Moyer, Daniel and Hoffmann, Malte and Abaci Turk, Esra and Gagoski, Borjan and Grant, Ellen and Golland, Polina},
     journal = {IEEE Transactions on Medical Imaging},
     year = {2024},
@@ -84,10 +144,23 @@
     selected = {true},
 }
 
+@article{gopinath_synthetic_2024,
+    title = {Synthetic data in generalizable, learning-based neuroimaging},
+    author = {Gopinath, Karthik and Hoopes, Andrew and Alexander, Daniel C. and Arnold, Steven E. and Balbastre, Yael and Billot, Benjamin and Casamitjana, Adrià and Cheng, You and Chua, Russ Yue Zhi and Edlow, Brian L. and Fischl, Bruce and Gazula, Harshvardhan and Hoffmann, Malte and Keene, C. Dirk and Kim, Seunghoi and Kimberly, W. Taylor and Laguna, Sonia and Larson, Kathleen E. and Van Leemput, Koen and Puonti, Oula and Rodrigues, Livia M. and Rosen, Matthew S. and Tregidgo, Henry F. J. and Varadarajan, Divya and Young, Sean I. and Dalca, Adrian V. and Iglesias, Juan Eugenio},
+    journal = {Imaging Neuroscience},
+    year = {2024},
+    volume = {2},
+    abstract = {Synthetic data have emerged as an attractive option for developing machine-learning methods in human neuroimaging, particularly in magnetic resonance imaging (MRI)—a modality where image contrast depends enormously on acquisition hardware and parameters. This retrospective paper reviews a family of recently proposed methods, based on synthetic data, for generalizable machine learning in brain MRI analysis. Central to this framework is the concept of domain randomization, which involves training neural networks on a vastly diverse array of synthetically generated images with random contrast properties. This technique has enabled robust, adaptable models that are capable of handling diverse MRI contrasts, resolutions, and pathologies, while working out-of-the-box, without retraining. We have successfully applied this method to tasks such as whole-brain segmentation (SynthSeg), skull-stripping (SynthStrip), registration (SynthMorph, EasyReg), super-resolution, and MR contrast transfer (SynthSR). Beyond these applications, the paper discusses other possible use cases and future work in our methodology. Neural networks trained with synthetic data enable the analysis of clinical MRI, including large retrospective datasets, while greatly alleviating (and sometimes eliminating) the need for substantial labeled datasets, and offer enormous potential as robust tools to address various research goals.},
+    html = {https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00337/124867/Synthetic-data-in-generalizable-learning-based},
+    pdf = {https://mitp.silverchair-cdn.com/mitp/content_public/journal/imag/2/10.1162_imag_a_00337/4/imag_a_00337.pdf?Expires=1767026785&Signature=o-V8FJawHlzmG0T62C0ai6GFVUS5xe9qxly1E6afmMseDymw1agzhqjgSZIno3iaNnlhv-IXpMRt6HcR9qjVwPd0-4rLyigIkjRW7BL7s4AGog1WayDvWwp1oE00LJLYx7LsAwJ7aSP-0vVGMTXG3pi28rKjufNvENOqqNfIF~2hbUMFTBGQnLEfUxgtxT3Ppadunrac6SWnRzp17t7K2ptP5DImE-0i6Ifz9NqEOEik92tDc6yjxuA2Uuvi9Ehli6BioyUiwbQh0IyHVjHvzZa-qXt-2yAkSUl~Ne2ru-zXmjdJ~5~IYMaprpmfGAtnmo6-vQC-pCWufbP6uKD4~w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA},
+    bibtex_show = {true},
+    abbr = {Journal},
+}
+
 @article{billot_robust_2023,
-    title = {{Robust} machine learning segmentation for large-scale analysis of heterogeneous clinical brain {MRI} datasets},
+    title = {Robust machine learning segmentation for large-scale analysis of heterogeneous clinical brain MRI datasets},
     author = {Billot, Benjamin and Colin, Magdamo and Cheng, You and Das, Sudeshna and Iglesias, Juan Eugenio},
-    journal = {{Proceedings} of the {National} {Academy} of {Sciences} ({PNAS})},
+    journal = {Proceedings of the National Academy of Sciences (PNAS)},
     year = {2023},
     volume = {120},
     number = {9},
@@ -99,44 +172,18 @@
     selected = {true},
 }
 
-@article{wei_linking_2023,
-    title = {Linking brain structure, cognition, and sleep: insights from clinical data},
-    author = {Wei, Ruoqi and Ganglberger, Wolfgang and Sun, Haoqi and Hadar, Peter and Gollub, Randy and Pieper, Steve and Billot, Benjamin and Au, Rhoda and Iglesias, Juan Eugenio and Cash, Sydney and Kim, Soriul and Shin, Chol and Westover, Brandon and Thomas, Robert},
-    journal = {Sleep},
+@article{billot_synthseg_2023,
+    title = {SynthSeg: Segmentation of brain MRI scans of any contrast and resolution without retraining},
+    author = {Billot, Benjamin and Greve, Douglas and Puonti, Oula and Thielscher, Axel and Van Leemput, Koen and Fischl, Bruce and Dalca, Adrian and Iglesias, Juan Eugenio},
+    journal = {Medical Image Analysis},
     year = {2023},
-    volume = {47},
-    number = {2},
-    abstract = {To use relatively noisy routinely collected clinical data (brain magnetic resonance imaging (MRI) data, clinical polysomnography (PSG) recordings, and neuropsychological testing), to investigate hypothesis-driven and data-driven relationships between brain physiology, structure, and cognition.We analyzed data from patients with clinical PSG, brain MRI, and neuropsychological evaluations. SynthSeg, a neural network-based tool, provided high-quality segmentations despite noise. A priori hypotheses explored associations between brain function (measured by PSG) and brain structure (measured by MRI). Associations with cognitive scores and dementia status were studied. An exploratory data-driven approach investigated age-structure-physiology-cognition links.Six hundred and twenty-three patients with sleep PSG and brain MRI data were included in this study; 160 with cognitive evaluations. Three hundred and forty-two participants (55\%) were female, and age interquartile range was 52 to 69 years. Thirty-six individuals were diagnosed with dementia, 71 with mild cognitive impairment, and 326 with major depression. One hundred and fifteen individuals were evaluated for insomnia and 138 participants had an apnea–hypopnea index equal to or greater than 15. Total PSG delta power correlated positively with frontal lobe/thalamic volumes, and sleep spindle density with thalamic volume. rapid eye movement (REM) duration and amygdala volume were positively associated with cognition. Patients with dementia showed significant differences in five brain structure volumes. REM duration, spindle, and slow-oscillation features had strong associations with cognition and brain structure volumes. PSG and MRI features in combination predicted chronological age (R2 = 0.67) and cognition (R2 = 0.40).Routine clinical data holds extended value in understanding and even clinically using brain-sleep-cognition relationships.},
-    html = {https://academic.oup.com/sleep/article/47/2/zsad294/7394969},
-    pdf = {https://watermark02.silverchair.com/zsad294.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAA1wwggNYBgkqhkiG9w0BBwagggNJMIIDRQIBADCCAz4GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMCf1GWdFvxT3U9K-gAgEQgIIDD4mzkdJWVVa-ymCicMbd18iowwyJe2ZQJ8TM-k2oJH2lIhgQ7RntKe5M5FNk7m9ABSsCsm96c4cD6l7aahLnwIZE30WNMGDV157STA7UY9zLKxckp-hxWj05NNOKsBjidLwdjFrVGD567E2WgM--c5keqdH0Z_bwnqESJTCDmRwPYr-twzgus18kRhnd15krSHUpzAoUj84xFpFLAANm6MN-Vp4NJNwxerC9BO2p8vAAVoc0AkVZuWAxEW6aRs1Pb45fOZPlh9sdZaGT1ukADakkl_2N1dlbhQgFjhpO0JAtlKrjomHyulhIdsD2CKc7jDshdMWk9sFL_a6zMdgY9kgxPEvS8wfYTMwGa9JSJeMBRcbPSTUmwCnaG8Ay8goJbsSauUhlPttjlgmdCdi9SLeNIsRF3Kmd40-esa5J1aTRsrMmRQ26oNrDghBIFRiT670bRg2nUeDhAHBEoran9Zi4gBl_-oTUfWGrwnvIh_bOi7JhHxgFvKOEUONRRuceelqmu4simYmcncpOTwBtJpxyHYp4-3yErBdZczP0f59-shOPduqqfycQtgcEUnLtB7sdji2yCyxfPFglnvjUdIa2xohgqbj6FXiaQ3yNo9fMM1ceUYtbHiU81lMfC_wMX_BjkeFPjRifuZPGLOL6miZMT56QhxLFbb6vLY0RwOKMmzk0w6GRlngMsPycfDAnRXr78KrJBrp1kc7QoCZIkEY_IOOhD69Fmv1bvF9Mw3vwxWOB2AYbtp9AWUApESiRHzT1BTdq25rBQojQD6G14OyCYqpKZqU4cE5YGsP_rAbOwYPWwWOv_SHpU6FQfjcqdoKzmyn9e6OtBWaFYXkizXegvIKv6nXdeB2lkHsRsoZpPNz0TBt7xcXd7rMaCtk1QtrNa3q0qtL_myxSzDYXf-JQZFWUQbddwxgCHt5Cs68FPjFWkn7GZ19zSA3uSLPvUJdNIW8Aoc1oAqybQEUe2HvRCiSDZ0Z5dzr-5smC3jb8uFj3S7rTcKxHJbSXSAFEXNmvJiO9Uifarz21Ak6YCQ},
+    volume = {86},
+    abstract = {Despite advances in data augmentation and transfer learning, convolutional neural networks (CNNs) difficultly generalise to unseen domains. When segmenting brain scans, CNNs are highly sensitive to changes in resolution and contrast: even within the same MRI modality, performance can decrease across datasets. Here we introduce SynthSeg, the first segmentation CNN robust against changes in contrast and resolution. SynthSeg is trained with synthetic data sampled from a generative model conditioned on segmentations. Crucially, we adopt a domain randomisation strategy where we fully randomise the contrast and resolution of the synthetic training data. Consequently, SynthSeg can segment real scans from a wide range of target domains without retraining or fine-tuning, which enables straightforward analysis of huge amounts of heterogeneous clinical data. Because SynthSeg only requires segmentations to be trained (no images), it can learn from labels obtained by automated methods on diverse populations (e.g., ageing and diseased), thus achieving robustness to a wide range of morphological variability. We demonstrate SynthSeg on 5,000 scans of six modalities (including CT) and ten resolutions, where it exhibits unparallelled generalisation compared with supervised CNNs, state-of-the-art domain adaptation, and Bayesian segmentation. Finally, we demonstrate the generalisability of SynthSeg by applying it to cardiac MRI and CT scans.},
+    html = {https://www.sciencedirect.com/science/article/pii/S1361841523000506},
+    pdf = {https://arxiv.org/pdf/2107.09559.pdf},
     bibtex_show = {true},
     abbr = {Journal},
-}
-
-@article{schabdach_brain_2023,
-    title = {Brain growth charts for quantitative analysis of pediatric clinical brain {MRI} scans with limited imaging pathology},
-    author = {Schabdach, Jenna and Schmitt, Eric and Sotardi, Susan and Vossough, Arastoo and Andronikou, Savvas and Roberts, Timothy and Huang, Hao and Padmanabhan, Viveknarayanan and Ortiz-Rosa, Alfredo and Gardner, Margaret and Covitz, Sydney and Bedford, Saashi and Mandal, Ayan and Chaiyachati, Barbara and White, Simon and Bullmore, Edward and Bethlehem, Richard and Shinohara, Russell and Billot, Benjamin and Iglesias, Juan Eugenio and Ghosh, Satrajit and Gur, Raquel and Satterthwaite, Theodore and Roalf, David and Seidlitz, Jakob and Alexander-Bloch, Aaron},
-    journal = {Radiology},
-    year = {2023},
-    volume = {309},
-    number = {1},
-    abstract = {Clinically acquired brain MRI scans represent a valuable but underused resource for investigating neurodevelopment dueto their technical heterogeneity and lack of appropriate controls. These barriers have curtailed retrospective studies of clinical brainMRI scans compared with more costly prospectively acquired research-quality brain MRI scans.Purpose: To provide a benchmark for neuroanatomic variability in clinically acquired brain MRI scans with limited imaging pathology(SLIPs) and to evaluate if growth charts from curated clinical MRI scans differed from research-quality MRI scans or were influencedby clinical indication for the scan.Materials and Methods: In this secondary analysis of preexisting data, clinical brain MRI SLIPs from an urban pediatric health care system(individuals aged ≤22 years) were scanned across nine 3.0-T MRI scanners. The curation process included manual review of signed ra-diology reports and automated and manual quality review of images without gross pathology. Global and regional volumetric imagingphenotypes were measured using two image segmentation pipelines, and clinical brain growth charts were quantitatively compared withcharts derived from a large set of research controls in the same age range by means of Pearson correlation and age at peak volume.Results: The curated clinical data set included 532 patients (277 male; median age, 10 years [IQR, 5–14 years]; age range, 28 days af-ter birth to 22 years) scanned between 2005 and 2020. Clinical brain growth charts were highly correlated with growth charts derivedfrom research data sets (22 studies, 8346 individuals [4947 male]; age range, 152 days after birth to 22 years) in terms of normativedevelopmental trajectories predicted by the models (median r = 0.979).Conclusion: The clinical indication of the scans did not significantly bias the output of clinical brain charts. Brain growth charts derivedfrom clinical controls with limited imaging pathology were highly correlated with brain charts from research controls, suggesting thepotential of curated clinical MRI scans to supplement research data sets.},
-    html = {https://pubs.rsna.org/doi/10.1148/radiol.230096},
-    pdf = {https://pubs.rsna.org/doi/epdf/10.1148/radiol.230096},
-    bibtex_show = {true},
-    abbr = {Journal},
-}
-
-@article{gazula_machine_2023,
-    title = {{Machine} learning of dissection photographs and surface scanning for quantitative {3D} neuropathology},
-    author = {Gazula, Harsha and Tregidgo, Henry and Billot, Benjamin and Balbastre, Yaël and William-Ramirez, Jonathan and Herisse, Rogeny and Deden-Binder, Lucas and Casamitjana, Adria and Melief, E. and Latimer, C. and Kilgore, M. and Montine, M. and Robinson, Eleanor and Blackburn, Emily and Marshall, M. and Connors, T. and Oakley, D. and Frosch, M. and Young, Sean and Van Leemput, Koen and Dalca, Adrian and Fischl, Bruce and Mac Donald, C. and Keene, C. and Hyman, B. and Iglesias, Juan Eugenio},
-    journal = {eLife},
-    year = {2023},
-    volume = {12},
-    abstract = {We present open-source tools for {3D} analysis of photographs of dissected slices of human brains, which are routinely acquired in brain banks but seldom used for quantitative analysis. Our tools can: (i) 3D reconstruct a volume from the photographs and, optionally, a surface scan; and (ii) produce a high-resolution 3D segmentation into 11 brain regions, independently of the slice thickness. Our tools can be used as a substitute for ex vivo magnetic resonance imaging (MRI), which requires access to an MRI scanner, ex vivo scanning expertise, and considerable financial resources. We tested our tools on synthetic and real data from two NIH Alzheimer’s Disease Research Centers. The results show that our methodology yields accurate 3D reconstructions, segmentations, and volumetric measurements that are highly correlated to those from MRI. Our method also detects expected differences between post mortem confirmed Alzheimer’s disease cases and controls. The tools are available in our widespread neuroimaging suite “FreeSurfer” (https://surfer.nmr.mgh.harvard.edu/fswiki/PhotoTools).},
-    html = {https://elifesciences.org/reviewed-preprints/91398v1},
-    bibtex_show = {true},
-    abbr = {Journal},
+    selected = {true},
 }
 
 @article{iglesias_synthsr_2023,
@@ -153,22 +200,22 @@
     abbr = {Journal},
 }
 
-@article{billot_synthseg_2023,
-    title = {SynthSeg: {Segmentation} of brain {MRI} scans of any contrast and resolution without retraining},
-    author = {Billot, Benjamin and Greve, Douglas and Puonti, Oula and Thielscher, Axel and Van Leemput, Koen and Fischl, Bruce and Dalca, Adrian and Iglesias, Juan Eugenio},
-    journal = {{Medical} {Image} {Analysis}},
+@article{wei_linking_2023,
+    title = {Linking brain structure, cognition, and sleep: insights from clinical data},
+    author = {Wei, Ruoqi and Ganglberger, Wolfgang and Sun, Haoqi and Hadar, Peter and Gollub, Randy and Pieper, Steve and Billot, Benjamin and Au, Rhoda and Iglesias, Juan Eugenio and Cash, Sydney and Kim, Soriul and Shin, Chol and Westover, Brandon and Thomas, Robert},
+    journal = {Sleep},
     year = {2023},
-    volume = {86},
-    abstract = {Despite advances in data augmentation and transfer learning, convolutional neural networks (CNNs) difficultly generalise to unseen domains. When segmenting brain scans, CNNs are highly sensitive to changes in resolution and contrast: even within the same MRI modality, performance can decrease across datasets. Here we introduce SynthSeg, the first segmentation CNN robust against changes in contrast and resolution. SynthSeg is trained with synthetic data sampled from a generative model conditioned on segmentations. Crucially, we adopt a domain randomisation strategy where we fully randomise the contrast and resolution of the synthetic training data. Consequently, SynthSeg can segment real scans from a wide range of target domains without retraining or fine-tuning, which enables straightforward analysis of huge amounts of heterogeneous clinical data. Because SynthSeg only requires segmentations to be trained (no images), it can learn from labels obtained by automated methods on diverse populations (e.g., ageing and diseased), thus achieving robustness to a wide range of morphological variability. We demonstrate SynthSeg on 5,000 scans of six modalities (including CT) and ten resolutions, where it exhibits unparallelled generalisation compared with supervised CNNs, state-of-the-art domain adaptation, and Bayesian segmentation. Finally, we demonstrate the generalisability of SynthSeg by applying it to cardiac MRI and CT scans.},
-    html = {https://www.sciencedirect.com/science/article/pii/S1361841523000506},
-    pdf = {https://arxiv.org/pdf/2107.09559.pdf},
+    volume = {47},
+    number = {2},
+    abstract = {To use relatively noisy routinely collected clinical data (brain magnetic resonance imaging (MRI) data, clinical polysomnography (PSG) recordings, and neuropsychological testing), to investigate hypothesis-driven and data-driven relationships between brain physiology, structure, and cognition.We analyzed data from patients with clinical PSG, brain MRI, and neuropsychological evaluations. SynthSeg, a neural network-based tool, provided high-quality segmentations despite noise. A priori hypotheses explored associations between brain function (measured by PSG) and brain structure (measured by MRI). Associations with cognitive scores and dementia status were studied. An exploratory data-driven approach investigated age-structure-physiology-cognition links.Six hundred and twenty-three patients with sleep PSG and brain MRI data were included in this study; 160 with cognitive evaluations. Three hundred and forty-two participants (55\%) were female, and age interquartile range was 52 to 69 years. Thirty-six individuals were diagnosed with dementia, 71 with mild cognitive impairment, and 326 with major depression. One hundred and fifteen individuals were evaluated for insomnia and 138 participants had an apnea–hypopnea index equal to or greater than 15. Total PSG delta power correlated positively with frontal lobe/thalamic volumes, and sleep spindle density with thalamic volume. rapid eye movement (REM) duration and amygdala volume were positively associated with cognition. Patients with dementia showed significant differences in five brain structure volumes. REM duration, spindle, and slow-oscillation features had strong associations with cognition and brain structure volumes. PSG and MRI features in combination predicted chronological age (R2 = 0.67) and cognition (R2 = 0.40).Routine clinical data holds extended value in understanding and even clinically using brain-sleep-cognition relationships.},
+    html = {https://academic.oup.com/sleep/article/47/2/zsad294/7394969},
+    pdf = {https://watermark02.silverchair.com/zsad294.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAA1wwggNYBgkqhkiG9w0BBwagggNJMIIDRQIBADCCAz4GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMCf1GWdFvxT3U9K-gAgEQgIIDD4mzkdJWVVa-ymCicMbd18iowwyJe2ZQJ8TM-k2oJH2lIhgQ7RntKe5M5FNk7m9ABSsCsm96c4cD6l7aahLnwIZE30WNMGDV157STA7UY9zLKxckp-hxWj05NNOKsBjidLwdjFrVGD567E2WgM--c5keqdH0Z_bwnqESJTCDmRwPYr-twzgus18kRhnd15krSHUpzAoUj84xFpFLAANm6MN-Vp4NJNwxerC9BO2p8vAAVoc0AkVZuWAxEW6aRs1Pb45fOZPlh9sdZaGT1ukADakkl_2N1dlbhQgFjhpO0JAtlKrjomHyulhIdsD2CKc7jDshdMWk9sFL_a6zMdgY9kgxPEvS8wfYTMwGa9JSJeMBRcbPSTUmwCnaG8Ay8goJbsSauUhlPttjlgmdCdi9SLeNIsRF3Kmd40-esa5J1aTRsrMmRQ26oNrDghBIFRiT670bRg2nUeDhAHBEoran9Zi4gBl_-oTUfWGrwnvIh_bOi7JhHxgFvKOEUONRRuceelqmu4simYmcncpOTwBtJpxyHYp4-3yErBdZczP0f59-shOPduqqfycQtgcEUnLtB7sdji2yCyxfPFglnvjUdIa2xohgqbj6FXiaQ3yNo9fMM1ceUYtbHiU81lMfC_wMX_BjkeFPjRifuZPGLOL6miZMT56QhxLFbb6vLY0RwOKMmzk0w6GRlngMsPycfDAnRXr78KrJBrp1kc7QoCZIkEY_IOOhD69Fmv1bvF9Mw3vwxWOB2AYbtp9AWUApESiRHzT1BTdq25rBQojQD6G14OyCYqpKZqU4cE5YGsP_rAbOwYPWwWOv_SHpU6FQfjcqdoKzmyn9e6OtBWaFYXkizXegvIKv6nXdeB2lkHsRsoZpPNz0TBt7xcXd7rMaCtk1QtrNa3q0qtL_myxSzDYXf-JQZFWUQbddwxgCHt5Cs68FPjFWkn7GZ19zSA3uSLPvUJdNIW8Aoc1oAqybQEUe2HvRCiSDZ0Z5dzr-5smC3jb8uFj3S7rTcKxHJbSXSAFEXNmvJiO9Uifarz21Ak6YCQ},
     bibtex_show = {true},
     abbr = {Journal},
-    selected = {true},
 }
 
 @article{iglesias_quantitative_2023,
-    title = {Quantitative Brain Morphometry of Portable Low-Field-Strength MRI Using Super-Resolution Machine Learning},
+    title = {Quantitative brain morphometry of portable low-field-strength MRI using super-resolution machine learning},
     author = {Iglesias, Juan Eugenio and Schleicher, Riana and Laguna, Sonia and Billot, Benjamin and Schaefer, Pamela and McKaig, Brenna and Goldstein, Joshua and Sheth, Kevin and Rosen, Matthew and Kimberly, Taylor},
     journal = {Radiology},
     year = {2023},
@@ -177,6 +224,47 @@
     abstract = {Background Portable, low-field-strength (0.064-T) MRI has the potential to transform neuroimaging but is limited by low spatial resolution and low signal-to-noise ratio. Purpose To implement a machine learning super-resolution algorithm that synthesizes higher spatial resolution images (1-mm isotropic) from lower resolution T1-weighted and T2-weighted portable brain MRI scans, making them amenable to automated quantitative morphometry. Materials and Methods An external high-field-strength MRI data set (1-mm isotropic scans from the Open Access Series of Imaging Studies data set) and segmentations for 39 regions of interest (ROIs) in the brain were used to train a super-resolution convolutional neural network (CNN). Secondary analysis of an internal test set of 24 paired low- and high-field-strength clinical MRI scans in participants with neurologic symptoms was performed. These were part of a prospective observational study (August 2020 to December 2021) at Massachusetts General Hospital (exclusion criteria: inability to lay flat, body habitus preventing low-field-strength MRI, presence of MRI contraindications). Three well-established automated segmentation tools were applied to three sets of scans: high-field-strength (1.5–3 T, reference standard), low-field-strength (0.064 T), and synthetic high-field-strength images generated from the low-field-strength data with the CNN. Statistical significance of correlations was assessed with Student t tests. Correlation coefficients were compared with Steiger Z tests. Results Eleven participants (mean age, 50 years ± 14; seven men) had full cerebrum coverage in the images without motion artifacts or large stroke lesion with distortion from mass effect. Direct segmentation of low-field-strength MRI yielded nonsignificant correlations with volumetric measurements from high field strength for most ROIs (P > .05). Correlations largely improved when segmenting the synthetic images: P values were less than .05 for all ROIs (eg, for the hippocampus [r = 0.85; P < .001], thalamus [r = 0.84; P = .001], and whole cerebrum [r = 0.92; P < .001]). Deviations from the model (z score maps) visually correlated with pathologic abnormalities. Conclusion This work demonstrated proof-of-principle augmentation of portable MRI with a machine learning super-resolution algorithm, which yielded highly correlated brain morphometric measurements to real higher resolution images. © RSNA, 2022 Online supplemental material is available for this article. See also the editorial by Ertl-Wagner amd Wagner in this issue. An earlier incorrect version appeared online.},
     html = {https://pubs.rsna.org/doi/abs/10.1148/radiol.220522},
     pdf = {https://pubs.rsna.org/doi/epdf/10.1148/radiol.220522},
+    bibtex_show = {true},
+    abbr = {Journal},
+}
+
+@article{schabdach_brain_2023,
+    title = {Brain growth charts for quantitative analysis of pediatric clinical brain MRI scans with limited imaging pathology},
+    author = {Schabdach, Jenna and Schmitt, Eric and Sotardi, Susan and Vossough, Arastoo and Andronikou, Savvas and Roberts, Timothy and Huang, Hao and Padmanabhan, Viveknarayanan and Ortiz-Rosa, Alfredo and Gardner, Margaret and Covitz, Sydney and Bedford, Saashi and Mandal, Ayan and Chaiyachati, Barbara and White, Simon and Bullmore, Edward and Bethlehem, Richard and Shinohara, Russell and Billot, Benjamin and Iglesias, Juan Eugenio and Ghosh, Satrajit and Gur, Raquel and Satterthwaite, Theodore and Roalf, David and Seidlitz, Jakob and Alexander-Bloch, Aaron},
+    journal = {Radiology},
+    year = {2023},
+    volume = {309},
+    number = {1},
+    abstract = {Clinically acquired brain MRI scans represent a valuable but underused resource for investigating neurodevelopment dueto their technical heterogeneity and lack of appropriate controls. These barriers have curtailed retrospective studies of clinical brainMRI scans compared with more costly prospectively acquired research-quality brain MRI scans.Purpose: To provide a benchmark for neuroanatomic variability in clinically acquired brain MRI scans with limited imaging pathology(SLIPs) and to evaluate if growth charts from curated clinical MRI scans differed from research-quality MRI scans or were influencedby clinical indication for the scan.Materials and Methods: In this secondary analysis of preexisting data, clinical brain MRI SLIPs from an urban pediatric health care system(individuals aged ≤22 years) were scanned across nine 3.0-T MRI scanners. The curation process included manual review of signed ra-diology reports and automated and manual quality review of images without gross pathology. Global and regional volumetric imagingphenotypes were measured using two image segmentation pipelines, and clinical brain growth charts were quantitatively compared withcharts derived from a large set of research controls in the same age range by means of Pearson correlation and age at peak volume.Results: The curated clinical data set included 532 patients (277 male; median age, 10 years [IQR, 5–14 years]; age range, 28 days af-ter birth to 22 years) scanned between 2005 and 2020. Clinical brain growth charts were highly correlated with growth charts derivedfrom research data sets (22 studies, 8346 individuals [4947 male]; age range, 152 days after birth to 22 years) in terms of normativedevelopmental trajectories predicted by the models (median r = 0.979).Conclusion: The clinical indication of the scans did not significantly bias the output of clinical brain charts. Brain growth charts derivedfrom clinical controls with limited imaging pathology were highly correlated with brain charts from research controls, suggesting thepotential of curated clinical MRI scans to supplement research data sets.},
+    html = {https://pubs.rsna.org/doi/10.1148/radiol.230096},
+    pdf = {https://pubs.rsna.org/doi/epdf/10.1148/radiol.230096},
+    bibtex_show = {true},
+    abbr = {Journal},
+}
+
+@article{gazula_machine_2023,
+    title = {Machine learning of dissection photographs and surface scanning for quantitative 3D neuropathology},
+    author = {Gazula, Harsha and Tregidgo, Henry and Billot, Benjamin and Balbastre, Yaël and William-Ramirez, Jonathan and Herisse, Rogeny and Deden-Binder, Lucas and Casamitjana, Adria and Melief, E. and Latimer, C. and Kilgore, M. and Montine, M. and Robinson, Eleanor and Blackburn, Emily and Marshall, M. and Connors, T. and Oakley, D. and Frosch, M. and Young, Sean and Van Leemput, Koen and Dalca, Adrian and Fischl, Bruce and Mac Donald, C. and Keene, C. and Hyman, B. and Iglesias, Juan Eugenio},
+    journal = {eLife},
+    year = {2023},
+    volume = {12},
+    abstract = {We present open-source tools for 3D analysis of photographs of dissected slices of human brains, which are routinely acquired in brain banks but seldom used for quantitative analysis. Our tools can: (i) 3D reconstruct a volume from the photographs and, optionally, a surface scan; and (ii) produce a high-resolution 3D segmentation into 11 brain regions, independently of the slice thickness. Our tools can be used as a substitute for ex vivo magnetic resonance imaging (MRI), which requires access to an MRI scanner, ex vivo scanning expertise, and considerable financial resources. We tested our tools on synthetic and real data from two NIH Alzheimer’s Disease Research Centers. The results show that our methodology yields accurate 3D reconstructions, segmentations, and volumetric measurements that are highly correlated to those from MRI. Our method also detects expected differences between post mortem confirmed Alzheimer’s disease cases and controls. The tools are available in our widespread neuroimaging suite “FreeSurfer” (https://surfer.nmr.mgh.harvard.edu/fswiki/PhotoTools).},
+    html = {https://elifesciences.org/reviewed-preprints/91398v1},
+    bibtex_show = {true},
+    abbr = {Journal},
+}
+
+@article{hoffmann_synthmorph_2022,
+    title = {SynthMorph: learning contrast-invariant registration without acquired images},
+    author = {Hoffmann, Malte and Billot, Benjamin and Greve, Douglas and Iglesias, Juan Eugenio and Fischl, Bruce and Dalca, Adrian},
+    journal = {IEEE Transactions on Medical Imaging},
+    year = {2022},
+    volume = {41},
+    number = {3},
+    pages = {543--558},
+    abstract = {We introduce a strategy for learning image registration without acquired imaging data, producing powerful networks agnostic to contrast introduced by magnetic resonance imaging (MRI). While classical registration methods accurately estimate the spatial correspondence between images, they solve an optimization problem for every new image pair. Learning-based techniques are fast at test time but limited to registering images with contrasts and geometric content similar to those seen during training. We propose to remove this dependency on training data by leveraging a generative strategy for diverse synthetic label maps and images that exposes networks to a wide range of variability, forcing them to learn more invariant features. This approach results in powerful networks that accurately generalize to a broad array of MRI contrasts. We present extensive experiments with a focus on 3D neuroimaging, showing that this strategy enables robust and accurate registration of arbitrary MRI contrasts even if the target contrast is not seen by the networks during training. We demonstrate registration accuracy surpassing the state of the art both within and across contrasts, using a single model. Critically, training on arbitrary shapes synthesized from noise distributions results in competitive performance, removing the dependency on acquired data of any kind. Additionally, since anatomical label maps are often available for the anatomy of interest, we show that synthesizing images from these dramatically boosts performance, while still avoiding the need for real intensity images. Our code is available at doic https://w3id.org/synthmorph.},
+    html = {https://ieeexplore.ieee.org/abstract/document/9552865},
+    pdf = {https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9552865},
     bibtex_show = {true},
     abbr = {Journal},
 }
@@ -194,6 +282,18 @@
     abbr = {Journal},
 }
 
+@article{iglesias_joint_2021,
+    title = {Joint super-resolution and synthesis of 1mm isotropic MP-RAGE volumes from clinical MRI exams with scans of different orientation, resolution and contrast},
+    author = {Iglesias, Juan Eugenio and Billot, Benjamin and Balbastre, Yaël and Tabari, Azadeh and Conklin, John and Gilberto, R. and Alexander, Daniel and Golland, Polina and Edlow, Brian and Fischl, Bruce},
+    journal = {NeuroImage},
+    year = {2021},
+    volume = {237},
+    abstract = {Most existing algorithms for automatic 3D morphometry of human brain MRI scans are designed for data with near-isotropic voxels at approximately 1 mm resolution, and frequently have contrast constraints as well-typically requiring T1-weighted images (e.g., MP-RAGE scans). This limitation prevents the analysis of millions of MRI scans acquired with large inter-slice spacing in clinical settings every year. In turn, the inability to quantitatively analyze these scans hinders the adoption of quantitative neuro imaging in healthcare, and also precludes research studies that could attain huge sample sizes and hence greatly improve our understanding of the human brain. Recent advances in convolutional neural networks (CNNs) are producing outstanding results in super-resolution and contrast synthesis of MRI. However, these approaches are very sensitive to the specific combination of contrast, resolution and orientation of the input images, and thus do not generalize to diverse clinical acquisition protocols – even within sites. In this article, we present SynthSR, a method to train a CNN that receives one or more scans with spaced slices, acquired with different contrast, resolution and orientation, and produces an isotropic scan of canonical contrast (typically a 1 mm MP-RAGE). The presented method does not require any preprocessing, beyond rigid coregistration of the input scans. Crucially, SynthSR trains on synthetic input images generated from 3D segmentations, and can thus be used to train CNNs for any combination of contrasts, resolutions and orientations without high-resolution real images of the input contrasts. We test the images generated with SynthSR in an array of common downstream analyses, and show that they can be reliably used for subcortical segmentation and volumetry, image registration (e.g., for tensor-based morphometry), and, if some image quality requirements are met, even cortical thickness morphometry. The source code is publicly available at https://github.com/BBillot/SynthSR.},
+    html = {https://www.sciencedirect.com/science/article/pii/S1053811921004833},
+    pdf = {https://pdf.sciencedirectassets.com/272508/1-s2.0-S1053811921X00109/1-s2.0-S1053811921004833/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjELv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQCurdpBWKmb9Vvz3Con4IxCSFg1dIqcK3PnXwNTZczxggIhAI7MjW0YiadYnFYG%2B26ycu2oorEQ%2BY3%2FoiaW3f3DlzIbKroFCOP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQBRoMMDU5MDAzNTQ2ODY1Igwc4KoXF0GCEkoCU7IqjgV5IWiU61oKEdQrVBJOwRhrtfj6okHU%2FmKWeg1lS3XMWUAjDv2kXYm75bWWlTsChK%2F7CvqUirj4qcoxCNRwU91lkBjT4BTNZ%2BfuMpu2zmfZs9yW1hkzVCSJ0co%2Fafg4LY9wP2%2FKsJ51Ns0R2R7sSnNkgj0BNJHwaby4BHCe9iQgiU%2BHWdYXpKnEut7VpxnJL%2FSvgXHUFaofKiYal0sdisK%2BS7FOwP9xU9O8EXTq4R0wwZpwrD3XQebsfOU9ZMSh5Zp18hldjV1wylQnYV75tjE49wZ0Hzmep7lqwqJe%2B1bGmXHbBzcVEp4NtEgz83flezaQ5jUQImAC1tpsmLa%2Bdyp6vJrEUQ9Xqkr1ZM8umIvI%2FXcKL23eeD1oZ4lGbgTLGjAMwWeyRpu9%2Fep6Brvd7I%2BeRspSkzCwCPGA%2FN%2Fqs9NgW1jzwFi7V4A5sBW0eGYBhZhRH4P1%2BIAtRrK6ReRyqE%2Fgays0XWWDRKC8evx7%2FxK4pktTcELTAHMC%2BDvQ2EfHgMH8TuZ2WWsOYBOPTbVa6sYDyLFk5V1Knx%2B2avR8j3D7Mvr7FzwQ1W68lx1VmhPbn%2FfmSr50VxqcGh2N87WwiAEm%2FDQ98r8bUEdEsTmV383QVV7PpwIi0SAZzTFbLzxBBq8XxR9KcGLczwOB%2FNiRMRkGn2vjrnSZ9CZCoG1%2BDe3TXIH43wkVSTXHOOuPbXxXshBBoqYPcv7u5Z0WJt4el0soO2I5A8urHH6fqgdOnGCmorS9G7%2BG7EfRCuhMWk2%2F6H2ARrTZqGAVhF5N1LAp83FV%2FoDlWJAPglbO1KFSEv%2Foa3DxZUKq%2BYki1WiBMuxAkWpmc%2BDMrtkIqxpMrtMR%2BOox8IuTdLmNjAo2DNFBPEYwp8eBqgY6sAH3%2Be%2FNd7sairW9Rb6hTQiCPuMzL%2BsHe26bp09p3NPyd22rFfo4syiBgmJA62wg14wuIwetphkj79HWqLxB3mX76OCdCcizDjmzcGh6cDXzk2o0TeAbZfXrlJtyDMbtvxhUvW5ShtIRGtUe17CwPdRFZdqJO3dhd6uqkLf3jqu0vYz3YZ6LrjqrIuZrt5yS9iKuHDrb6NdilL6ixI5CAVkveEkF0BJt%2F%2Fmj2tarHl1JPA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20231031T030041Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY4K7ONGJH%2F20231031%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=3d536b3e2c078954dc51a4c8f30e8ce1c6bf88aacbde4725ec1741d360ac9361&hash=a0b559d36419a6dbcc8a8288a407afbd641e13862975e12eb3b6e810dbf639fd&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1053811921004833&tid=spdf-45bdd306-d811-4ec3-9007-d63ad0f71b0f&sid=fbe70a1278b31342850b9056ddf7331b38eagxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=0f165c520a5803515c&rr=81e8a62c0b143ba5&cc=us},
+    bibtex_show = {true},
+    abbr = {Journal},
+}
 
 @article{greve_deep_2021,
     title = {A deep learning toolbox for automatic segmentation of subcortical limbic structures from MRI images},
@@ -208,36 +308,8 @@
     abbr = {Journal},
 }
 
-@article{hoffmann_synthmorph_2022,
-    title = {SynthMorph: Learning Contrast-Invariant Registration Without Acquired Images},
-    author = {Hoffmann, Malte and Billot, Benjamin and Greve, Douglas and Iglesias, Juan Eugenio and Fischl, Bruce and Dalca, Adrian},
-    journal = {IEEE Transactions on Medical Imaging},
-    year = {2022},
-    volume = {41},
-    number = {3},
-    pages = {543--558},
-    abstract = {We introduce a strategy for learning image registration without acquired imaging data, producing powerful networks agnostic to contrast introduced by magnetic resonance imaging (MRI). While classical registration methods accurately estimate the spatial correspondence between images, they solve an optimization problem for every new image pair. Learning-based techniques are fast at test time but limited to registering images with contrasts and geometric content similar to those seen during training. We propose to remove this dependency on training data by leveraging a generative strategy for diverse synthetic label maps and images that exposes networks to a wide range of variability, forcing them to learn more invariant features. This approach results in powerful networks that accurately generalize to a broad array of MRI contrasts. We present extensive experiments with a focus on 3D neuroimaging, showing that this strategy enables robust and accurate registration of arbitrary MRI contrasts even if the target contrast is not seen by the networks during training. We demonstrate registration accuracy surpassing the state of the art both within and across contrasts, using a single model. Critically, training on arbitrary shapes synthesized from noise distributions results in competitive performance, removing the dependency on acquired data of any kind. Additionally, since anatomical label maps are often available for the anatomy of interest, we show that synthesizing images from these dramatically boosts performance, while still avoiding the need for real intensity images. Our code is available at doic https://w3id.org/synthmorph.},
-    html = {https://ieeexplore.ieee.org/abstract/document/9552865},
-    pdf = {https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9552865},
-    bibtex_show = {true},
-    abbr = {Journal},
-}
-
-@article{iglesias_joint_2021,
-    title = {Joint super-resolution and synthesis of 1mm isotropic MP-RAGE volumes from clinical MRI exams with scans of different orientation, resolution and contrast},
-    author = {Iglesias, Juan Eugenio and Billot, Benjamin and Balbastre, Yaël and Tabari, Azadeh  and Conklin, John and {Gilberto González}, R. and Alexander, Daniel C. and Golland, Polina  and Edlow, Brian L. and Fischl, Bruce },
-    journal = {NeuroImage},
-    year = {2021},
-    volume = {237},
-    abstract = {Most existing algorithms for automatic 3D morphometry of human brain MRI scans are designed for data with near-isotropic voxels at approximately 1 mm resolution, and frequently have contrast constraints as well-typically requiring T1-weighted images (e.g., MP-RAGE scans). This limitation prevents the analysis of millions of MRI scans acquired with large inter-slice spacing in clinical settings every year. In turn, the inability to quantitatively analyze these scans hinders the adoption of quantitative neuro imaging in healthcare, and also precludes research studies that could attain huge sample sizes and hence greatly improve our understanding of the human brain. Recent advances in convolutional neural networks (CNNs) are producing outstanding results in super-resolution and contrast synthesis of MRI. However, these approaches are very sensitive to the specific combination of contrast, resolution and orientation of the input images, and thus do not generalize to diverse clinical acquisition protocols – even within sites. In this article, we present SynthSR, a method to train a CNN that receives one or more scans with spaced slices, acquired with different contrast, resolution and orientation, and produces an isotropic scan of canonical contrast (typically a 1 mm MP-RAGE). The presented method does not require any preprocessing, beyond rigid coregistration of the input scans. Crucially, SynthSR trains on synthetic input images generated from 3D segmentations, and can thus be used to train CNNs for any combination of contrasts, resolutions and orientations without high-resolution real images of the input contrasts. We test the images generated with SynthSR in an array of common downstream analyses, and show that they can be reliably used for subcortical segmentation and volumetry, image registration (e.g., for tensor-based morphometry), and, if some image quality requirements are met, even cortical thickness morphometry. The source code is publicly available at https://github.com/BBillot/SynthSR.},
-    html = {https://www.sciencedirect.com/science/article/pii/S1053811921004833},
-    pdf = {https://pdf.sciencedirectassets.com/272508/1-s2.0-S1053811921X00109/1-s2.0-S1053811921004833/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjELv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQCurdpBWKmb9Vvz3Con4IxCSFg1dIqcK3PnXwNTZczxggIhAI7MjW0YiadYnFYG%2B26ycu2oorEQ%2BY3%2FoiaW3f3DlzIbKroFCOP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQBRoMMDU5MDAzNTQ2ODY1Igwc4KoXF0GCEkoCU7IqjgV5IWiU61oKEdQrVBJOwRhrtfj6okHU%2FmKWeg1lS3XMWUAjDv2kXYm75bWWlTsChK%2F7CvqUirj4qcoxCNRwU91lkBjT4BTNZ%2BfuMpu2zmfZs9yW1hkzVCSJ0co%2Fafg4LY9wP2%2FKsJ51Ns0R2R7sSnNkgj0BNJHwaby4BHCe9iQgiU%2BHWdYXpKnEut7VpxnJL%2FSvgXHUFaofKiYal0sdisK%2BS7FOwP9xU9O8EXTq4R0wwZpwrD3XQebsfOU9ZMSh5Zp18hldjV1wylQnYV75tjE49wZ0Hzmep7lqwqJe%2B1bGmXHbBzcVEp4NtEgz83flezaQ5jUQImAC1tpsmLa%2Bdyp6vJrEUQ9Xqkr1ZM8umIvI%2FXcKL23eeD1oZ4lGbgTLGjAMwWeyRpu9%2Fep6Brvd7I%2BeRspSkzCwCPGA%2FN%2Fqs9NgW1jzwFi7V4A5sBW0eGYBhZhRH4P1%2BIAtRrK6ReRyqE%2Fgays0XWWDRKC8evx7%2FxK4pktTcELTAHMC%2BDvQ2EfHgMH8TuZ2WWsOYBOPTbVa6sYDyLFk5V1Knx%2B2avR8j3D7Mvr7FzwQ1W68lx1VmhPbn%2FfmSr50VxqcGh2N87WwiAEm%2FDQ98r8bUEdEsTmV383QVV7PpwIi0SAZzTFbLzxBBq8XxR9KcGLczwOB%2FNiRMRkGn2vjrnSZ9CZCoG1%2BDe3TXIH43wkVSTXHOOuPbXxXshBBoqYPcv7u5Z0WJt4el0soO2I5A8urHH6fqgdOnGCmorS9G7%2BG7EfRCuhMWk2%2F6H2ARrTZqGAVhF5N1LAp83FV%2FoDlWJAPglbO1KFSEv%2Foa3DxZUKq%2BYki1WiBMuxAkWpmc%2BDMrtkIqxpMrtMR%2BOox8IuTdLmNjAo2DNFBPEYwp8eBqgY6sAH3%2Be%2FNd7sairW9Rb6hTQiCPuMzL%2BsHe26bp09p3NPyd22rFfo4syiBgmJA62wg14wuIwetphkj79HWqLxB3mX76OCdCcizDjmzcGh6cDXzk2o0TeAbZfXrlJtyDMbtvxhUvW5ShtIRGtUe17CwPdRFZdqJO3dhd6uqkLf3jqu0vYz3YZ6LrjqrIuZrt5yS9iKuHDrb6NdilL6ixI5CAVkveEkF0BJt%2F%2Fmj2tarHl1JPA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20231031T030041Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY4K7ONGJH%2F20231031%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=3d536b3e2c078954dc51a4c8f30e8ce1c6bf88aacbde4725ec1741d360ac9361&hash=a0b559d36419a6dbcc8a8288a407afbd641e13862975e12eb3b6e810dbf639fd&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1053811921004833&tid=spdf-45bdd306-d811-4ec3-9007-d63ad0f71b0f&sid=fbe70a1278b31342850b9056ddf7331b38eagxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=0f165c520a5803515c&rr=81e8a62c0b143ba5&cc=us},
-    bibtex_show = {true},
-    abbr = {Journal},
-}
-
 @article{billot_automated_2020,
-    title = {Automated segmentation of the hypothalamus and associated subunits in brain {MRI}},
+    title = {Automated segmentation of the hypothalamus and associated subunits in brain MRI},
     author = {Billot, Benjamin and Bocchetta, Martina and Todd, Emily and Dalca, Adrian and Rohrer, Jonathan and Iglesias, Juan Eugenio},
     journal = {NeuroImage},
     year = {2020},
@@ -252,9 +324,81 @@
 
 # CONFERENCE PAPERS
 
+@inproceedings{muthukrishnan_equivariant_2026,
+    title = {Equivariant symmetry-aware head pose estimation for fetal MRI},
+    author = {Muthukrishnan, Ramya and Gagoski, Borjan and Lee, Aryn and Grant, Ellen and Adalsteinsson, Elfar and Billot, Benjamin and Golland, Polina},
+    booktitle = {ECCV},
+    year = {2026},
+    abstract = {We present E(3)-Pose, a novel fast pose estimation method that jointly and explicitly models rotation equivariance and object symmetry. Our work is motivated by the challenging problem of accounting for fetal head motion during a diagnostic MRI scan. We aim to enable automatic adaptive prescription of diagnostic 2D MRI slices with 6-DoF head pose estimation, supported by rapid low-resolution 3D MRI volumes acquired before each 2D slice. Existing pose estimation methods struggle to generalize to clinical volumes due to pose ambiguities induced by inherent anatomical symmetries, as well as low resolution, noise, and artifacts. In contrast, E(3)-Pose captures anatomical symmetries and rigid pose equivariance by construction, and yields robust estimates of the fetal head pose. Our experiments on publicly available and representative clinical fetal MRI datasets demonstrate the superior robustness and generalization of our method across domains. Crucially, E(3)-Poseachieves state-of-the-art accuracy on clinical MRI volumes, supporting future clinical translation.},
+    html = {https://eccv.ecva.net/virtual/2026/poster/4519},
+    pdf = {https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/6314.pdf},
+    bibtex_show = {true},
+    abbr = {Conf.},
+}
+
+@inproceedings{facente_lxpose_2026,
+    title = {LXPose++: an attention-based framework for robust real-time CT to X-ray registration},
+    author = {Facente, Federica and Wei, Wen and Kattel, Manasi and Delingette, Hervé and Ayache, Nicholas and Berthet-Rayne, Pierre and Billot, Benjamin},
+    booktitle = {MICCAI COLAS},
+    year = {2026},
+    abstract = {2D X-Ray imaging provides real-time guidance during minimally invasive interventions. Nonetheless, it lacks depth and soft-tissue contrast. Clinicians must therefore mentally register it with preoperative 3D Computed Tomography (CT), increasing cognitive overload. LXPose, a recent two-stage CNN framework, automates this 3D/2D registration in real time (20ms) through a single forward pass, bypassing the much slower (7s) state-of-the-art optimization methods. However, its accuracy remains limited by the domain gap between synthetic training projections and real intraoperative X-Rays. Here, we propose to build on this method and present LXPose++, which introduces two targeted improvements: masking the CT to retain only rigid bones, preventing the networks from aligning anatomies that deform intraoperatively; and integrating a Convolutional Block Attention Module (CBAM) to refine feature extraction. On two datasets spanning different organs, these improvements nearly halve the projection error of LXPose with no added inference cost. Crucially, LXPose++ reaches the accuracy of state-of-the-art optimization methods, while being 40 times faster, which unlocks online clinical applications.},
+    html = {https://openreview.net/forum?id=lZ3wkLeq4R},
+    pdf = {https://openreview.net/pdf?id=lZ3wkLeq4R},
+    bibtex_show = {true},
+    abbr = {Conf.},
+}
+
+@inproceedings{kattel_crosskey_2026,
+    title = {CrossKey: learning cross-modal keypoints for explainable MRI-TRUS rigid prostate registration},
+    author= {Kattel, Manasi and Billot, Benjamin and Facente, Federica, and Delingette, Hervé and Ayache, Nicholas},
+    booktitle = {MICAD},
+    year = {2026},
+    abstract = {Rigid registration is a critical component of fusion-guided prostate biopsy, enabling information from pre-operative magnetic resonance images (MRI) to be transferred to intra-operative transrectal ultrasound (TRUS) used for live guidance. Accurate alignment is thus paramount to display MRI-defined biopsy targets at correct TRUS locations. State-of-the-art learning-based methods achieve strong accuracy by direct transform regression, but these provide limited insight into the anatomical evidence used for alignment, hindering explainability, clinical trust and failure assessment. Here, we propose CrossKey, an explainable keypoint-based framework for rigid MRI-TRUS registration that learns cross-modal landmark correspondences and estimates alignment from these landmarks. We train and evaluate CrossKey on a large in-house dataset of 1,247 MRI-TRUS pairs acquired during fusionguided prostate biopsy. CrossKey achieves an SRE of 3.57 mm, improving over the strongest keypoint-based baseline by 18.9% and slightly outperforming the state-of-the-art regression-based methods. Further analysis shows that CrossKey learns stable, spatially distributed landmarks across patients, supporting interpretable and geometrically constrained alignment. These results demonstrate that cross-modal landmark learning makes explainable keypoint-based registration competitive in challenging MRI-TRUS prostate alignment.},
+    html = {https://hal.science/hal-05756619/},
+    pdf = {https://hal.science/hal-05756619v1/document},
+    bibtex_show = {true},
+    abbr = {Conf.},
+}
+
+@inproceedings{pentassuglia_anatomy_2026,
+    title = {Anatomy-conditioned domain randomization for zero-shot 3D cerebrovascular segmentation},
+    author= {Pentassuglia, Matteo and Zhang, Xiaoming and Billot, Benjamin and Zuluaga, Maria},
+    booktitle = {MICCAI},
+    year = {2026},
+    abstract = {Domain randomization methods have shown strong cross-domain robustness in neuroimaging, yet their use for 3D cerebrovascular segmentation remains limited. Existing vascular synthetic pipelines largely model vessel morphology and appearance in isolation, with limited explicit control of organ-level anatomical context during image generation. We propose an anatomy-conditioned DR framework for zero-shot 3D cerebrovascular segmentation using only synthetic training images that addresses these challenges through three task-specific components: anatomically consistent background context, morphology-aware vessel enrichment, and contrast-aware randomized label-to-image synthesis. A 3D CNN is trained exclusively on synthetically generated images and corresponding vessel masks, with no target-domain images or masks used for training or model selection. Under strict zero-shot evaluation on unseen TOF-MRA and CTA datasets, our method improves over a vessel-centric synthetic baseline and matches or exceeds a vessel-specific foundation model on CTA, while remaining competitive on TOF-MRA. These results show that anatomy-conditioned DR can provide a label-efficient alternative to large foundation-model pipelines for robust zero-shot 3D cerebrovascular segmentation.},
+    html = {https://link.springer.com/chapter/10.1007/978-3-032-38072-2_3#citeas},
+    pdf = {https://papers.miccai.org/miccai-2026/paper/2678_paper.pdf},
+    bibtex_show = {true},
+    abbr = {Conf.},
+}
+
+@inproceedings{delanglais_learning_2026,
+    title = {Resource-efficient automatic refinement of segmentations via weak supervision from light feedback},
+    author= {De Langlais, Alix and Billot, Benjamin and Vidal, Théo and Gauci, Marc-Olivier and Delingette, Hervé},
+    booktitle = {ISBI},
+    year = {2026},
+    abstract = {Delineating anatomical regions is a key task in medical image analysis. Manual segmentation achieves high accuracy but is labor-intensive and prone to variability, thus prompting the development of automated approaches. Recently, a breadth of foundation models has enabled automated segmentations across diverse anatomies and imaging modalities, but these may not always meet the clinical accuracy standards. While segmentation refinement strategies can improve performance, current methods depend on heavy user interactions or require fully supervised segmentations for training. Here, we present SCORE (Segmentation COrrection from Regional Evaluations), a weakly supervised framework that learns to refine mask predictions only using light feedback during training. Specifically, instead of relying on dense training image annotations, SCORE introduces a novel loss that leverages region-wise quality scores and over/under-segmentation error labels. We demonstrate SCORE on humerus CT scans, where it considerably improves initial predictions from TotalSegmentator, and achieves performance on par with existing refinement methods, while greatly reducing their supervision requirements and annotation time.},
+    html = {https://ieeexplore.ieee.org/abstract/document/11515853},
+    pdf = {https://inria.hal.science/hal-05571851/file/ISBI26_paper_1571220762.pdf},
+    bibtex_show = {true},
+    abbr = {Conf.},
+}
+
+@inproceedings{dey_learning_2025,
+    title = {Learning general-purpose biomedical volume representations using randomized synthesis},
+    author = {Dey, Neel and Billot, Benjamin and Wong, Hallee and Wang, Clinton and Ren, Mengwei and Grant, Ellen and Dalca, Adrian and Golland, Polina},
+    booktitle = {ICLR},
+    year = {2025},
+    abstract = {Current volumetric biomedical foundation models struggle to generalize as public 3D datasets are small and do not cover the broad diversity of medical procedures, conditions, anatomical regions, and imaging protocols. We address this by creating a representation learning method that instead anticipates strong domain shifts at training time itself. We first propose a data engine that synthesizes highly variable training samples that would enable generalization to new biomedical contexts. To then train a single 3D network for any voxel-level task, we develop a contrastive learning method that pretrains the network to be stable against nuisance imaging variation simulated by the data engine, a key inductive bias for generalization. This network’s features can be used as robust representations of input images for downstream tasks and its weights provide a strong, dataset-agnostic initialization for finetuning on new datasets. As a result, we set new standards across both multimodality registration and few-shot segmentation, a first for any 3D biomedical vision model, all without (pre-)training on any existing dataset of real images.},
+    html = {https://www.neeldey.com/anatomix/},
+    pdf = {https://arxiv.org/pdf/2411.02372},
+    bibtex_show = {true},
+    abbr = {Conf.},
+}
+
 @inproceedings{billot_spatial_2025,
     title = {Spatial regularisation for improved accuracy and interpretability in keypoint-based registration},
-    author = {Billot, Benjamin and Muthukrishnan, Ramya and Abaci Turk, Esra and Grant, Ellen and Ayache, Nicholas and Delingette, Herv{\'e} and Golland, Polina},
+    author = {Billot, Benjamin and Muthukrishnan, Ramya and Abaci Turk, Esra and Grant, Ellen and Ayache, Nicholas and Delingette, Hervé and Golland, Polina},
     booktitle = {MICCAI},
     year = {2025},
     pages = {583--593},
@@ -267,7 +411,7 @@
 
 @inproceedings{diaz_robust_2025,
     title = {Robust fetal pose estimation across gestational ages via cross-population augmentation},
-    author = {iaz, Sebastian and Billot, Benjamin and Dey, Neel and Zhang, Molin and Abaci Turk, Esra and Grant, Ellen and Golland, Polina and Adalsteinsson, Elfar},
+    author = {Diaz, Sebastian and Billot, Benjamin and Dey, Neel and Zhang, Molin and Abaci Turk, Esra and Grant, Ellen and Golland, Polina and Adalsteinsson, Elfar},
     booktitle = {MICCAI},
     year = {2025},
     pages = {549--559},
@@ -292,8 +436,8 @@
 }
 
 @inproceedings{kattel_robust_2025,
-    title = {Robust rigid {MRI}-{TRUS} registration in prostate cancer using attention-{CNN} and {ICP}},
-    author = {Kattel, Manasi and Billot, Benjamin and Facente, Federica and Delingette, Herv{\'e} and Ayache, Nicholas},
+    title = {Robust rigid MRI-TRUS registration in prostate cancer using attention-CNN and ICP},
+    author = {Kattel, Manasi and Billot, Benjamin and Facente, Federica and Delingette, Hervé and Ayache, Nicholas},
     booktitle = {MICCAI -- ASMUS workshop},
     year = {2025},
     pages = {65--75},
@@ -306,24 +450,12 @@
 
 @inproceedings{facente_multi_2025,
     title = {Multi-stage CNN for fast registration of 3D preoperative CTs to 2D intraoperative X-rays},
-    author = {Facente, Federica and Billot, Benjamin and Gopalakrishnan, Vivek and Kattel, Manasi and Wei, Wen and Golland, Polina and Delingette, Herv{\'e} and Ayache, Nicholas and Berthet-Rayne, Pierre},
+    author = {Facente, Federica and Billot, Benjamin and Gopalakrishnan, Vivek and Kattel, Manasi and Wei, Wen and Golland, Polina and Delingette, Hervé and Ayache, Nicholas and Berthet-Rayne, Pierre},
     booktitle = {MICCAI -- COLAS workshop},
     year = {2025},
     abstract = {Minimally invasive interventions often rely on live 2D X-rays for image guidance. Yet, anatomical localization and procedural accuracy can be enhanced by spatial alignment of these intraoperative X-rays with 3D preoperative computed tomographies (CTs). This 3D/2D registration problem is typically formulated as pose estimation of the X-ray source relatively to the CT, which is done by simulating synthetic X-rays from 2D projections of CT volumes. However, the optimization-based refinement used by the state-of-the-art deep learning approach takes several seconds, thus exceeding the allowed time budget in live image guidance. In this paper, we propose LXPose (Live X-ray Pose estimation), a selfsupervised multi-stage 3D/2D registration framework for real-time image guidance. LXpose removes the dependency on optimization and leverages a two-stage CNN trained with a projection loss to ensure high accuracy and computational efficiency. Moreover, we apply extensive data augmentation to mitigate the domain gap between simulated and real X-rays. Overall, LXPose yields comparable 2D registration error to the state-of-the-art method, while reducing inference time to 20ms, which demonstrates the potential of LXPose for real-time clinical deployment. Our code is available at https://github.com/fedefacente/LXPose.git.},
     html = {https://sites.google.com/view/miccai-2025-colas/home},
     pdf = {https://hal.science/hal-05218972v1/document},
-    bibtex_show = {true},
-    abbr = {Conf.},
-}
-
-@inproceedings{dey_learning_2025,
-    title = {Learning general-purpose biomedical volume representations using randomized synthesis},
-    author = {Dey, Neel and Billot, Benjamin and Wong, Hallee and Wang, Clinton and Ren, Mengwei and Grant, Ellen and Dalca, Adrian and Golland, Polina},
-    booktitle = {ICLR},
-    year = {2025},
-    abstract = {Current volumetric biomedical foundation models struggle to generalize as public 3D datasets are small and do not cover the broad diversity of medical procedures, conditions, anatomical regions, and imaging protocols. We address this by creating a representation learning method that instead anticipates strong domain shifts at training time itself. We first propose a data engine that synthesizes highly variable training samples that would enable generalization to new biomedical contexts. To then train a single 3D network for any voxel-level task, we develop a contrastive learning method that pretrains the network to be stable against nuisance imaging variation simulated by the data engine, a key inductive bias for generalization. This network’s features can be used as robust representations of input images for downstream tasks and its weights provide a strong, dataset-agnostic initialization for finetuning on new datasets. As a result, we set new standards across both multimodality registration and few-shot segmentation, a first for any 3D biomedical vision model, all without (pre-)training on any existing dataset of real images.},
-    html = {https://www.neeldey.com/anatomix/},
-    pdf = {https://arxiv.org/pdf/2411.02372},
     bibtex_show = {true},
     abbr = {Conf.},
 }
@@ -341,7 +473,7 @@
 }
 
 @inproceedings{dey_anystar_2024,
-    title = {{AnyStar}: domain randomized universal star-convex {3D} instance segmentation},
+    title = {AnyStar: domain randomized universal star-convex 3D instance segmentation},
     author = {Dey, Neel and Abulnaga, Mazdak, and Billot, Benjamin and Abaci Turk, Esra and Grant, Ellen and Dalca, Adrian and Golland, Polina},
     booktitle = {Winter Conference on Applications of Computer Vision},
     year = {2024},
@@ -353,20 +485,8 @@
     abbr = {Conf.},
 }
 
-@inproceedings{cheng_association_2024,
-    title = {Association of brain {MRI} signatures with {Alzheimer} disease {CSF} biomarkers},
-    author = {Cheng, You and Gopinath, Karthik and Billot, Benjamin and Iglesias, Juan Eugenio and Touroutoglou, Alexandra and Kivisäkk, Pia and Wu, Chao-Yi and Dodge, Hiroko and Hyman, Bradley and Arnold, Steven and Das, Sudeshna},
-    booktitle = {Alzheimer's Association International Conference},
-    year = {2024},
-    abstract = {The relationship between CSF measures of Alzheimer disease (AD) pathologies and their neurodegenerative signatures is not fully understood. This study seeks to employ machine learning approaches on clinical MRI data to identify patterns associated with amyloid and tau, aiming to guide diagnosis and therapeutic interventions. Method We selected brain volumes that differed significantly between AD pathology and control groups. Then we utilized logistic LASSO regression to identify and compare neurodegenerative signatures associated with amyloid and tau burdens using selected brain volumes. Our methods were applied to a dataset that included clinical MRI scans from patients who also had cerebrospinal fluid (CSF) biomarkers assessed within a year of the MRI scan (Figure 1). Model performance was measured using the cross-validation area under the receiver operating characteristic curve (AUROC), as well as the accuracy, sensitivity, and specificity in a 25\% held-out test set. Result For amyloid status, among 30 amyloid-positive, tau-negative (A+T-) patients and 24 cognitively unimpaired A-T- controls, we identified 25 significant features associated with amyloid status, including subcortical areas (e.g., amygdala, thalamus, hippocampus), cortical areas (e.g., inferior temporal cortex, inferior parietal cortex, precuneus), ventricles (lateral ventricle, inferior lateral ventricle, and the 3rd ventricle), cerebellum (cerebellum white matter and cerebellum cortex), and brain stem (Figure 2A). Our model with these features yielded an AUROC of 0.792 (95\% CI: [0.783, 0.801]), and a sensitivity of 0.857 at specificity of 1 (Figure 2B). In the assessment of tau status, where the amyloid-negative, tau-positive group (A-T+) included 14 patients and the control group comprised 24. The volumes showed significant difference associated with tau status, including subcortical areas (amygdala, ventral diencephalon, hippocampus), the 4th ventricle, and cerebellum white matter (Figure 3A). The model achieved an AUROC of 0.858 (95\% C.I. [0.85, 0.866]), with a sensitivity of 1 at specificity of 1 (Figure 3B and C). Conclusion The study underscores the potential of using widely available clinical MRI images to measure AD and associated pathologies in the brain, which hold significant promise for guiding treatment interventions.},
-    html = {https://alz-journals.onlinelibrary.wiley.com/doi/full/10.1002%2Falz.092833},
-    pdf = {https://alz-journals.onlinelibrary.wiley.com/doi/epdf/10.1002/alz.092833},
-    bibtex_show = {true},
-    abbr = {Conf.},
-}
-
 @inproceedings{laso_quantifying_2024,
-    title = {Quantifying white matter hyperintensity and brain volumes in heterogeneous clinical and low-field portable {MRI}},
+    title = {Quantifying white matter hyperintensity and brain volumes in heterogeneous clinical and low-field portable MRI},
     author = {Laso, Pablo and Cerri, Stefano and Sorby-Adams, Annabel and Guo, Jennifer and Mateen, Farrah and Goebl, Philipp and Wu, Jiaming and Liu, Peirong and Li, Hongwei and Young, Sean and Billot, Benjamin and Puonti, Oula and Sze, Gordon and Payabavash, Sam and DeHavenon, Adam and Sheth, Kevin and Rosen, Matthew and Kirsch, John and Strisciuglio, Nicola and Wolterink, Jelmer and Eshaghi, Arman and Barkhof, Frederik and Kimberly, Taylor and Iglesias, Juan Eugenio},
     booktitle = {ISBI},
     year = {2024},
@@ -377,8 +497,20 @@
     abbr = {Conf.},
 }
 
+@inproceedings{cheng_association_2024,
+    title = {Association of brain MRI signatures with Alzheimer's disease CSF biomarkers},
+    author = {Cheng, You and Gopinath, Karthik and Billot, Benjamin and Iglesias, Juan Eugenio and Touroutoglou, Alexandra and Kivisäkk, Pia and Wu, Chao-Yi and Dodge, Hiroko and Hyman, Bradley and Arnold, Steven and Das, Sudeshna},
+    booktitle = {Alzheimer's Association International Conference},
+    year = {2024},
+    abstract = {The relationship between CSF measures of Alzheimer disease (AD) pathologies and their neurodegenerative signatures is not fully understood. This study seeks to employ machine learning approaches on clinical MRI data to identify patterns associated with amyloid and tau, aiming to guide diagnosis and therapeutic interventions. Method We selected brain volumes that differed significantly between AD pathology and control groups. Then we utilized logistic LASSO regression to identify and compare neurodegenerative signatures associated with amyloid and tau burdens using selected brain volumes. Our methods were applied to a dataset that included clinical MRI scans from patients who also had cerebrospinal fluid (CSF) biomarkers assessed within a year of the MRI scan (Figure 1). Model performance was measured using the cross-validation area under the receiver operating characteristic curve (AUROC), as well as the accuracy, sensitivity, and specificity in a 25\% held-out test set. Result For amyloid status, among 30 amyloid-positive, tau-negative (A+T-) patients and 24 cognitively unimpaired A-T- controls, we identified 25 significant features associated with amyloid status, including subcortical areas (e.g., amygdala, thalamus, hippocampus), cortical areas (e.g., inferior temporal cortex, inferior parietal cortex, precuneus), ventricles (lateral ventricle, inferior lateral ventricle, and the 3rd ventricle), cerebellum (cerebellum white matter and cerebellum cortex), and brain stem (Figure 2A). Our model with these features yielded an AUROC of 0.792 (95\% CI: [0.783, 0.801]), and a sensitivity of 0.857 at specificity of 1 (Figure 2B). In the assessment of tau status, where the amyloid-negative, tau-positive group (A-T+) included 14 patients and the control group comprised 24. The volumes showed significant difference associated with tau status, including subcortical areas (amygdala, ventral diencephalon, hippocampus), the 4th ventricle, and cerebellum white matter (Figure 3A). The model achieved an AUROC of 0.858 (95\% C.I. [0.85, 0.866]), with a sensitivity of 1 at specificity of 1 (Figure 3B and C). Conclusion The study underscores the potential of using widely available clinical MRI images to measure AD and associated pathologies in the brain, which hold significant promise for guiding treatment interventions.},
+    html = {https://alz-journals.onlinelibrary.wiley.com/doi/full/10.1002%2Falz.092833},
+    pdf = {https://alz-journals.onlinelibrary.wiley.com/doi/epdf/10.1002/alz.092833},
+    bibtex_show = {true},
+    abbr = {Conf.},
+}
+
 @inproceedings{tregidgo_domain_2022,
-	title = {Domain-agnostic segmentation of thalamic nuclei from joint structural and diffusion {MRI}},
+	title = {Domain-agnostic segmentation of thalamic nuclei from joint structural and diffusion MRI},
     author = {Tregidgo, Henry and Soskic, Sonja and Olchanyi, Mark and Althonayan, Juri and Billot, Benjamin and Maffei, Chiara and Golland, Polina and Yendiki, Anastasia and Alexander, Daniel and Bocchetta, Martina and Rohrer, Jonathan and Iglesias, Juan Eugenio},
 	booktitle = {MICCAI},
 	year = {2023},
@@ -391,7 +523,7 @@
 }
 
 @inproceedings{billot_equivariant_2023,
-    title = {Equivariant and denoising {CNNs} to decouple intensity and spatial features for motion tracking in fetal brain {MRI}},
+    title = {Equivariant and denoising CNNs to decouple intensity and spatial features for motion tracking in fetal brain MRI},
     author = {Billot, Benjamin and Moyer, Daniel and Karani, Neerav and Hoffmann, Malte and Abaci Turk, Esra and Grant, Ellen and Golland, Polina},
     booktitle = {MIDL},
     year = {2023},
@@ -403,7 +535,7 @@
 }
 
 @inproceedings{billot_robust_2022,
-	title = {Robust segmentation of brain {MRI} in the wild with hierarchical {CNNs} and no retraining},
+	title = {Robust segmentation of brain MRI in the wild with hierarchical CNNs and no retraining},
     author = {Billot, Benjamin and Colin, Magdamo and Arnold, Steven and Das, Sudeshna and Iglesias, Juan Eugenio},
 	booktitle = {MICCAI},
 	year = {2022},
@@ -416,7 +548,7 @@
 }
 
 @inproceedings{laguna_super_2022,
-    title = {Super-resolution of portable low-field {MRI} in real scenarios: integration with denoising and domain adaptation},
+    title = {Super-resolution of portable low-field MRI in real scenarios: integration with denoising and domain adaptation},
     author = {Laguna, Sonia and Schleicher, Riana and Billot, Benjamin and Schaefer, Pamela and McKaig, Brenna and Goldstein, Joshua and Sheth, Kevin and Rosen, Matthew and Kimberly, Taylor and Iglesias, Juan Eugenio},
     booktitle = {MIDL},
     year = {2022},
@@ -428,7 +560,7 @@
 }
 
 @inproceedings{billot_joint_2021,
-	title = {Joint segmentation of multiple sclerosis lesions and brain anatomy in {MRI} scans of any contrast and resolution with {CNNs}},
+	title = {Joint segmentation of multiple sclerosis lesions and brain anatomy in MRI scans of any contrast and resolution with CNNs},
 	author = {Billot, Benjamin and Cerri, Stefano and Van Leemput, Koen and Dalca, Adrian and Iglesias, Juan Eugenio},
 	booktitle = {ISBI},
     year = {2021},
@@ -441,7 +573,7 @@
 }
 
 @inproceedings{hoffmann_learning_2021,
-    title = {Learning {MRI} contrast-agnostic registration},
+    title = {Learning MRI contrast-agnostic registration},
     author = {Hoffmann, Malte and Billot, Benjamin and Iglesias, Juan Eugenio and Fischl, Bruce and Dalca, Adrian},
     booktitle = {ISBI},
     year = {2021},
@@ -454,7 +586,7 @@
 }
 
 @inproceedings{billot_partial_2020,
-    title = {Partial volume segmentation of brain {MRI} scans of any resolution and contrast},
+    title = {Partial volume segmentation of brain MRI scans of any resolution and contrast},
     author = {Billot, Benjamin and Robinson, Eleanor and Dalca, Adrian and Iglesias, Juan Eugenio},
     booktitle = {MICCAI},
     year = {2020},
@@ -467,7 +599,7 @@
 }
 
 @inproceedings{billot_learning_2020,
-    title = {A learning strategy for contrast-agnostic {MRI} segmentation},
+    title = {A learning strategy for contrast-agnostic MRI segmentation},
     author = {Billot, Benjamin and Greve, Douglas and Leemput, Koen Van and Fischl, Bruce and Iglesias, Juan Eugenio and Dalca, Adrian},
     booktitle = {MIDL},
     year = {2020},
@@ -480,12 +612,12 @@
 }
 
 @inproceedings{cher_image_2019,
-    title = {Image Synthesis with a Convolutional Capsule Generative Adversarial Network},
-    author = {Bass, Cher and Dai, Tianhong and Billot, Benjamin and Arulkumaran, Kai and Creswell, Antonia and Clopath, Claudia and {De Paola}, Vincenzo and Bharath, Anil},
+    title = {Image synthesis with a convolutional capsule generative adversarial network},
+    author = {Bass, Cher and Dai, Tianhong and Billot, Benjamin and Arulkumaran, Kai and Creswell, Antonia and Clopath, Claudia and De Paola, Vincenzo and Bharath, Anil},
     booktitle = {MIDL},
     year = {2019},
     pages = {39--62},
-    abstract = {Machine learning for biomedical imaging often suffers from a lack of labelled training data. One solution is to use generative models to synthesise more data. To this end, we introduce CapsPix2Pix, which combines convolutional capsules with the \texttt{pix2pix} framework, to synthesise images conditioned on class segmentation labels. We apply our approach to a new biomedical dataset of cortical axons imaged by two-photon microscopy, as a method of data augmentation for small datasets. We evaluate performance both qualitatively and quantitatively. Quantitative evaluation is performed by using image data generated by either CapsPix2Pix or \texttt{pix2pix} to train a U-net on a segmentation task, then testing on real microscopy data. Our method quantitatively performs as well as \texttt{pix2pix}, with an order of magnitude fewer parameters. Additionally, CapsPix2Pix is far more capable at synthesising images of different appearance, but the same underlying geometry. Finally, qualitative analysis of the features learned by CapsPix2Pix suggests that individual capsules capture diverse and often semantically meaningful groups of features, covering structures such as synapses, axons and noise.},
+    abstract = {Machine learning for biomedical imaging often suffers from a lack of labelled training data. One solution is to use generative models to synthesise more data. To this end, we introduce CapsPix2Pix, which combines convolutional capsules with the pix2pix framework, to synthesise images conditioned on class segmentation labels. We apply our approach to a new biomedical dataset of cortical axons imaged by two-photon microscopy, as a method of data augmentation for small datasets. We evaluate performance both qualitatively and quantitatively. Quantitative evaluation is performed by using image data generated by either CapsPix2Pix or pix2pix to train a U-net on a segmentation task, then testing on real microscopy data. Our method quantitatively performs as well as pix2pix, with an order of magnitude fewer parameters. Additionally, CapsPix2Pix is far more capable at synthesising images of different appearance, but the same underlying geometry. Finally, qualitative analysis of the features learned by CapsPix2Pix suggests that individual capsules capture diverse and often semantically meaningful groups of features, covering structures such as synapses, axons and noise.},
     html = {https://proceedings.mlr.press/v102/bass19a.html},
     pdf = {http://proceedings.mlr.press/v102/bass19a/bass19a.pdf},
     bibtex_show = {true},
@@ -493,7 +625,7 @@
 }
 
 @inproceedings{dai_deep_2019,
-    title = {Deep Reinforcement Learning for Subpixel Neural Tracking},
+    title = {Deep reinforcement learning for subpixel neural tracking},
     author = {Dai, Tianhong and Dubois, Magda and Arulkumaran, Kai and Campbell, Jonathan and Bass, Cher and Billot, Benjamin and Uslu, Fatmatulzehra and de Paola, Vincenzo and Clopath, Claudia and Bharath, Anil},
     booktitle = {MIDL},
     year = {2019},
